@@ -1,11 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="horizontal"
+              android:orientation="vertical"
               android:layout_width="match_parent" android:layout_height="match_parent">
 
     <fragment class="za.co.gdgcapetown.safelyhome.ui.PersonalDetailFragment"
-              android:id="@+id/titles" android:layout_weight="1"
-              android:layout_width="0px" android:layout_height="match_parent"
+              android:id="@+id/detail"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
               tools:layout="@layout/fragment_personal"/>
+
+    <fragment class="za.co.gdgcapetown.safelyhome.ui.IncidentFragment"
+              android:id="@+id/incident"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              tools:layout="@layout/fragment_incident"/>
+
 
 </LinearLayout>
