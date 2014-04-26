@@ -1,10 +1,12 @@
 package za.co.gdgcapetown.safelyhome;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +23,20 @@ public class MainActivity extends ActionBarActivity  implements PersonalDetailFr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        switchToPersonalDetails();
+        if (checkDetailsExist()) {
+            switchToIncidentReport();
+        } else {
+            switchToPersonalDetails();
+        }
+    }
+
+    private boolean checkDetailsExist() {
+        SharedPreferences settings = getSharedPreferences(PersonalDetailFragment.PREFS_NAME, 0);
+        String emailPref = settings.getString(PersonalDetailFragment.KEY_EMAIL, "");
+        if (TextUtils.isEmpty(emailPref)) {
+            return false;
+        }
+        return true;
     }
 
 

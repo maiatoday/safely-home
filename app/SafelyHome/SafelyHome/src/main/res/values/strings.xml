@@ -5,5 +5,7 @@
     <string name="blurb">Report reckless traffic incidents. </string>
     <string name="agree_conditions">I understand that this report does not substitute a police station report and cannot be used for insurance purposes.</string>
     <string name="action_settings">Settings</string>
+    <string name="name_error">You need to fill in a name.</string>
+    <string name="email_error">You need to fill in an email.</string>
 
 </resources>
