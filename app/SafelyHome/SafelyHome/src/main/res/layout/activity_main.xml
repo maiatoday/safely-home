@@ -1,60 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="za.co.gdgcapetown.safelyhome.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/blurb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/blurb_label"/>
+    <fragment class="za.co.gdgcapetown.safelyhome.ui.PersonalDetailFragment"
+              android:id="@+id/titles" android:layout_weight="1"
+              android:layout_width="0px" android:layout_height="match_parent"
+              tools:layout="@layout/fragment_personal"/>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Personal Details"
-            android:layout_below="@+id/blurb_label"
-            android:id="@+id/text_label"
-            android:layout_centerHorizontal="true"/>
-
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Your Name"
-            android:ems="10"
-            android:id="@+id/edit_name"
-            android:layout_below="@+id/text_label"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:hint="email@example.com"
-            android:id="@+id/edit_email"
-            android:layout_below="@+id/edit_name"/>
-
-    <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/agree_conditions"
-            android:id="@+id/agree_checkBox"
-            android:checked="false"
-            android:layout_below="@+id/edit_email"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:layout_marginTop="42dp"
-            android:layout_below="@+id/agree_checkBox"
-            android:layout_alignRight="@+id/agree_checkBox"
-            android:layout_alignEnd="@+id/agree_checkBox"
-            android:id="@+id/button"/>
-
-</RelativeLayout>
+</LinearLayout>
