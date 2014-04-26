@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">SafelyHome</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="blurb">Report reckless traffic incidents. </string>
+    <string name="agree_conditions">I understand that this report does not substitute a police station report and cannot be used for insurance purposes.</string>
     <string name="action_settings">Settings</string>
 
 </resources>

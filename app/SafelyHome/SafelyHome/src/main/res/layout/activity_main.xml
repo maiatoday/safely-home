@@ -9,8 +9,52 @@
     tools:context="za.co.gdgcapetown.safelyhome.MainActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="@string/blurb"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/blurb_label"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Personal Details"
+            android:layout_below="@+id/blurb_label"
+            android:id="@+id/text_label"
+            android:layout_centerHorizontal="true"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Your Name"
+            android:ems="10"
+            android:id="@+id/edit_name"
+            android:layout_below="@+id/text_label"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:hint="email@example.com"
+            android:id="@+id/edit_email"
+            android:layout_below="@+id/edit_name"/>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agree_conditions"
+            android:id="@+id/agree_checkBox"
+            android:checked="false"
+            android:layout_below="@+id/edit_email"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/agree_checkBox"
+            android:layout_alignRight="@+id/agree_checkBox"
+            android:layout_alignEnd="@+id/agree_checkBox"
+            android:id="@+id/button"/>
 
 </RelativeLayout>
