@@ -1,24 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="za.co.gdgcapetown.safelyhome.MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="za.co.gdgcapetown.safelyhome.MainActivity">
 
     <TextView
-        android:text="@string/blurb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/blurb_label"/>
-    <ImageButton
+            android:text="@string/blurb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_camera"
-            android:id="@+id/camera_button"
-            android:layout_below="@+id/text_what"/>
+            android:id="@+id/blurb_label"/>
 
     <TextView
             android:layout_width="wrap_content"
@@ -27,6 +21,7 @@
             android:text="@string/where"
             android:id="@+id/text_where"
             android:layout_below="@+id/blurb_label"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +29,7 @@
             android:text="@string/when"
             android:id="@+id/text_when"
             android:layout_below="@+id/text_where"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,5 +37,57 @@
             android:text="@string/what"
             android:id="@+id/text_what"
             android:layout_below="@+id/text_when"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_incident_type"
+            android:layout_below="@+id/text_what"
+            android:entries="@array/incidents_array"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/et_description"
+            android:hint="@string/hint_description"
+            android:layout_below="@+id/sp_incident_type"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_vehicle_type"
+            android:layout_below="@+id/et_description"
+            android:entries="@array/vehicle_type_array"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/et_vehicle_description"
+            android:hint="@string/hint_vehicle"
+            android:layout_below="@+id/sp_vehicle_type"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/et_vehicle_registration"
+            android:hint="@string/hint_registration"
+            android:layout_below="@+id/et_vehicle_description"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_camera"
+            android:id="@+id/camera_button"
+            android:layout_below="@+id/et_vehicle_registration"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_below="@+id/camera_button"/>
+
+
 
 </RelativeLayout>

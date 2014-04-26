@@ -10,5 +10,31 @@
     <string name="where">Where?</string>
     <string name="when">When?</string>
     <string name="what">What?</string>
+    <string name="hint_description">Describe the incident</string>
+    <string name="hint_vehicle">Describe the vehicle</string>
+    <string name="hint_registration">Vehicle registration</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="incidents_array">
+        <item>Illegal parking</item>
+        <item>Inconsiderate (legal) parking</item>
+        <item>Inconsiderate driving</item>
+        <item>Inconsiderate driving - public transport</item>
+        <item>Reckless driving</item>
+        <item>Reckless driving - public transport</item>
+        <item>Pedestrians</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="vehicle_type_array">
+        <item>Motorcycle</item>
+        <item>LDV - Bakkie</item>
+        <item>HMV - Truck</item>
+        <item>Minibus</item>
+        <item>Minibus taxi</item>
+        <item>Motor car</item>
+        <item>Bus</item>
+        <item>Other</item>
+    </string-array>
 
 </resources>
