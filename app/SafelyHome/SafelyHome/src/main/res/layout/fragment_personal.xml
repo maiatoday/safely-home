@@ -55,6 +55,6 @@
             android:layout_below="@+id/agree_checkBox"
             android:layout_alignRight="@+id/agree_checkBox"
             android:layout_alignEnd="@+id/agree_checkBox"
-            android:id="@+id/button"/>
+            android:id="@+id/button_detail_ok"/>
 
 </RelativeLayout>

@@ -1,12 +1,17 @@
 package za.co.gdgcapetown.safelyhome;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import za.co.gdgcapetown.safelyhome.ui.PersonalDetailFragment;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends ActionBarActivity  implements PersonalDetailFragment.OnDetailsComplete{
+
+    private static final String TAG = MainActivity.class.toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +34,15 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            // TODO switch to the personal details fragment
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDetailsOk() {
+        Log.d(TAG, "The fragment pressed ok");
+        // TODO switch to the incident fragment
     }
 }
