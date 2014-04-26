@@ -18,6 +18,28 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_camera"
             android:id="@+id/camera_button"
+            android:layout_below="@+id/text_what"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/where"
+            android:id="@+id/text_where"
             android:layout_below="@+id/blurb_label"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/when"
+            android:id="@+id/text_when"
+            android:layout_below="@+id/text_where"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/what"
+            android:id="@+id/text_what"
+            android:layout_below="@+id/text_when"/>
 
 </RelativeLayout>
